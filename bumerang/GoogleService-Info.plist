@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>162856635122-asn5rhi45eujtmk1epn5u9tl0n1pkrev.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.162856635122-asn5rhi45eujtmk1epn5u9tl0n1pkrev</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>162856635122-3251468n5ppfnn63e7fo9dj0qkmm6tep.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB2H7y1xs2FgjFaOrcK_8xiGi4k7DQavJQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>162856635122</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.berkapp.bumerang</string>
+	<key>PROJECT_ID</key>
+	<string>turbumerang-de93a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>turbumerang-de93a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:162856635122:ios:04263a728b80f738115e6b</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>DATABASE_URL</key>
+	<string>https://turbumerang-de93a.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+framework module Pods_bumerangUITests {
+  umbrella header "Pods-bumerangUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

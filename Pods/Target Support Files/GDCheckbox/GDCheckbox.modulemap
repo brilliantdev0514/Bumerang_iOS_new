@@ -1,0 +1,6 @@
+framework module GDCheckbox {
+  umbrella header "GDCheckbox-umbrella.h"
+
+  export *
+  module * { export * }
+}
