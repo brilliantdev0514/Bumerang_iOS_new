@@ -173,7 +173,7 @@ class CarDetailVC: BaseViewController {
     }
     
     func reportConfirm() {
-        let alert = UIAlertController(title: "", message: "İlanı 24 saat içerisinde inceleyip gerekli önlemleri alacağız.", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "", message: "İlanı 24 saat içerisinde inceleyip gerekli önlemleri alacağız.", preferredStyle: .alert)
        
         alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)

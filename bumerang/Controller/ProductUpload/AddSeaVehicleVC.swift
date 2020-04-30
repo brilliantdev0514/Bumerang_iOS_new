@@ -151,7 +151,7 @@ class AddSeaVehicleVC: BaseViewController {
         let cancelAction = UIAlertAction(title:R_EN.string.CANCEL, style: .cancel, handler : nil)
         
         // Create and configure the alert controller.
-        let alert = UIAlertController(title: R_EN.string.APP_TITLE, message: R_EN.string.CORNFRIM_IMAGE_SETMODE, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: R_EN.string.APP_TITLE, message: R_EN.string.CORNFRIM_IMAGE_SETMODE, preferredStyle: .alert)
         alert.addAction(galleryAction)
         alert.addAction(cameraAction)
         alert.addAction(cancelAction)

@@ -152,13 +152,13 @@ class StandardInfoVC: BaseViewController {
     }
 
     func reportConfirm() {
-        let alert = UIAlertController(title: "", message: "Kullanıcıyı bildirdiniz, gerekli işlemi yapacağız", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "", message: "Kullanıcıyı bildirdiniz, gerekli işlemi yapacağız", preferredStyle: .alert)
        
         alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     func blockConfirm() {
-        let alert = UIAlertController(title: "", message: "Kullanıcıyı engellediniz, bu kullanıcıdan asla mesaj göndermeyecek veya almayacaksınız", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "", message: "Kullanıcıyı engellediniz, bu kullanıcıdan asla mesaj göndermeyecek veya almayacaksınız", preferredStyle: .alert)
         
          alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: nil))
          self.present(alert, animated: true, completion: nil)
@@ -244,6 +244,9 @@ extension StandardInfoVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == self.ui_product_coll {
+            
+            print("=================>")
+            print(self.productData[indexPath.row].category)
               self.gotoProdauctdetailpageVC(productNum: indexPath.row)
            
             
@@ -260,22 +263,67 @@ extension StandardInfoVC: UICollectionViewDelegate {
         
         var nameVC = ""
         if productData[productNum].category != nil {
-            
-        let toVC = self.storyboard?.instantiateViewController(withIdentifier: "profileuploadimageDetails") as! profileuploadimageDetails
-                       toVC.oneProduct = productData[productNum]
-            self.navigationController?.pushViewController(toVC, animated: true)
+        
             let catagoryNum = Int(productData[productNum].category)
-//            switch  catagoryNum {
-//            case 0 :
-//                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "profileuploadimageDetails") as! profileuploadimageDetails
-//                toVC.oneProduct = productData[productNum]
-//                self.navigationController?.pushViewController(toVC, animated: true)
-//
-//
-//
-//            default:
-//                nameVC = ""
-//            }
+            switch  catagoryNum {
+            case 1 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeDetailVC") as! HomeDetailVC
+                toVC.oneProduct = productData[productNum]
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 2 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "CarDetailVC") as! CarDetailVC
+                toVC.oneProduct = productData[productNum]
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 3:
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "CaravanDetailVC") as! CaravanDetailVC
+                toVC.oneProduct = productData[productNum]
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 4 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "SeaVehicleDetailVC") as! SeaVehicleDetailVC
+                toVC.oneProduct = productData[productNum]
+                self.navigationController?.pushViewController(toVC, animated: true)
+
+            case 5 :
+                
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "ClothDetailVC") as! ClothDetailVC
+                toVC.oneProduct = productData[productNum]
+                self.navigationController?.pushViewController(toVC, animated: true)
+            case 6:
+                
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "BikeDetailVC") as! BikeDetailVC
+                toVC.oneProduct_ = productData[productNum]
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 7 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "CameraDetailVC") as! CameraDetailVC
+                toVC.oneProduct = productData[productNum]
+                toVC.navigationTitle = "Kiralık DSLR & Video"
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 8 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "CameraDetailVC") as! CameraDetailVC
+                toVC.oneProduct = productData[productNum]
+                toVC.navigationTitle = "Kiralık Kamp Ekipmanları"
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 9 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "CameraDetailVC") as! CameraDetailVC
+                toVC.oneProduct = productData[productNum]
+                toVC.navigationTitle = "Kiralık Müzik Enstrümanları"
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            case 10 :
+                let toVC = self.storyboard?.instantiateViewController(withIdentifier: "CameraDetailVC") as! CameraDetailVC
+                toVC.oneProduct = productData[productNum]
+                toVC.navigationTitle = "Diğer"
+                self.navigationController?.pushViewController(toVC, animated: true)
+                
+            default:
+                nameVC = ""
+            }
             
             if nameVC.isEmpty {
                 return

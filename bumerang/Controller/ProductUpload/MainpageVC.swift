@@ -338,14 +338,19 @@ class MainpageVC: BaseViewController {
     }
     
     @IBAction func onClickMyProfile(_ sender: Any) {
-        if (ShareData.user_info.membership == "1") {
-            let toVC = self.storyboard?.instantiateViewController(withIdentifier: "BusinessInfoVC") as! BusinessInfoVC
+        let membershipStatus = ShareData.user_info.membership
+        if (membershipStatus == "1") {
+            self.setTransitionType(.fromLeft)
+            let toVC = self.storyboard?.instantiateViewController( withIdentifier: "BusinessInfoVC") as! BusinessInfoVC
+//            toVC.oneProduct = oneProduct
             toVC.modalPresentationStyle = .fullScreen
-            self.present(toVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(toVC, animated: true)
         } else {
-            let toVC = self.storyboard?.instantiateViewController(withIdentifier: "StandardInfoVC") as! StandardInfoVC
+            self.setTransitionType(.fromLeft)
+            let toVC = self.storyboard?.instantiateViewController( withIdentifier: "StandardInfoVC") as! StandardInfoVC
+//            toVC.oneProduct = oneProduct
             toVC.modalPresentationStyle = .fullScreen
-            self.present(toVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(toVC, animated: true)
         }
     }
     
